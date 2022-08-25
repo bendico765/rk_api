@@ -1,0 +1,12 @@
+version: "3"
+services:
+ rk-api:
+  build: .
+  image: "rk-api"
+  container_name: "rk-api"
+  ports:
+   - "1236:5000"
+  volumes:
+   - ./rk_api:/app/rk_api
+   - ./app.py:/app/app.py
+   - ./.env:/app/.env
