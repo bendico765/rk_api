@@ -4,6 +4,7 @@ services:
   build: .
   image: "rk-api"
   container_name: "rk-api"
+  restart: "on-failure"
   ports:
    - "1236:5000"
   volumes:
